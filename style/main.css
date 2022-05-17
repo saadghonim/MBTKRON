@@ -194,7 +194,7 @@ figure {
 
 header {
   padding-top: 10px;
-  z-index: 100;
+  z-index: 90;
   position: fixed;
   top: 0;
   left: 0;
@@ -419,8 +419,9 @@ nav .ul_menu li a:hover {
     -webkit-transition: .5s;
     transition: .5s;
     overflow-y: auto;
+    text-align: center;
     position: fixed;
-    width: 270px;
+    width: 100%;
     height: 100%;
     background-color: #ffffff;
     top: 0;
@@ -436,15 +437,13 @@ nav .ul_menu li a:hover {
     left: -100%;
   }
   nav .ul_nav {
-    -webkit-padding-start: 20px;
-            padding-inline-start: 20px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   nav .ul_nav > li {
     margin-bottom: 15px;
@@ -457,8 +456,8 @@ nav .ul_menu li a:hover {
     -webkit-margin-end: 0px;
             margin-inline-end: 0px;
   }
-  nav .ul_nav > li a {
-    text-align: start;
+  nav .ul_nav > li {
+    width: 100%;
   }
   .hover_menu {
     display: -webkit-box;
@@ -471,6 +470,27 @@ nav .ul_menu li a:hover {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
+    position: relative;
+  }
+  .hover_menu > a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .hover_menu > a::after {
+    content: "";
+    font-family: "line Awesome Free";
+    font-weight: 900;
+    font-size: 8px;
+    color: #253138;
+    -webkit-margin-start: 2px;
+            margin-inline-start: 2px;
   }
   .hover_menu .ul_menu {
     -webkit-transition: inherit;
@@ -482,6 +502,9 @@ nav .ul_menu li a:hover {
     z-index: 1;
     background-color: transparent;
     display: none;
+  }
+  .hover_menu .ul_menu li {
+    text-align: center;
   }
   .hover_menu .ul_menu li a {
     color: #b3b3b3;
@@ -501,6 +524,48 @@ html[dir="rtl"] .open_menu {
 
 html[dir="ltr"] .open_menu {
   left: 0;
+}
+
+.fixed_form {
+  position: fixed;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  left: 50%;
+  top: -1000px;
+  background-color: #ffffff;
+  width: calc(100vw - 30px);
+  max-width: 450px;
+  z-index: 111;
+  text-align: start;
+  padding: 60px 30px 40px;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.open_popup {
+  top: 50% !important;
+}
+
+.clsoe_popup {
+  font-size: 22px;
+  position: absolute;
+  top: 20px;
+  color: #253138;
+  -webkit-transition: .5s;
+  transition: .5s;
+  cursor: pointer;
+}
+
+.clsoe_popup:hover {
+  color: #ffc700;
+}
+
+html[dir="rtl"] .clsoe_popup {
+  left: 20px;
+}
+
+html[dir="ltr"] .clsoe_popup {
+  left: 20px;
 }
 
 main {
@@ -949,8 +1014,8 @@ html[dir="ltr"] .services .out_container {
 .block1, .block2, .block3 {
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
-  -webkit-animation-duration: 5s;
-          animation-duration: 5s;
+  -webkit-animation-duration: 9s;
+          animation-duration: 9s;
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
   -webkit-animation-fill-mode: forwards;

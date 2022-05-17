@@ -16,7 +16,33 @@
 </head>
 <body>
   <div class="moboverlay"></div>
-
+  <div class="fixed_form">
+    <i class="las la-times clsoe_popup"></i>
+      <form>
+        <div class="group_form">
+          <input type="text" class="form-control" placeholder="الاسم بالكامل*">
+        </div>
+        <div class="group_form">
+          <input type="tel:" class="form-control" placeholder="رقم الجوال*">
+        </div>
+        <div class="group_form">
+          <div class="position_r">
+          <i class="las la-angle-down angle_select"></i>
+            <select name="region" id="region" required="">
+              <option value="">المدينة</option>
+              <option value="">الرياض</option>
+              <option value="">الرياض</option>
+          </select>
+          </div>
+        </div>
+        <div class="group_form">
+          <input type="text" class="form-control" placeholder="البريد الإلكتروني">
+        </div>
+      <div class="btn_div">
+        <button class="btn_gh btn_send form-submit">إرسال</button>
+      </div>
+    </form>
+  </div>
 <!-- ~~~~~~~~~~~~~~~~start header~~~~~~~~~~~~~~~~~~~~~~ -->
 <header>
   <div class="container">
@@ -55,7 +81,7 @@
         <button class="btn_bars btn_gh">
           <i class="las la-bars"></i>
         </button>
-        <button class="btn_gh btn_appointment">احجز موعد</button>
+        <button class="btn_gh btn_appointment click_popup">احجز موعد</button>
       </div>
     </div>
   </div>
@@ -78,7 +104,7 @@
     <div class="about_ser">
       <div class="about_right">
         <p class="m_P_gh">هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها. ولذلك يتم استخدام طريقة لوريم إيبسوم لأنها تعطي توزيعاَ طبيعياَ للأحرف عوضاً عن استخدام فتجعلها تبدو وكأنها نص مقروء</p>
-        <button class="btn_gh">احجز موعد الآن</button>
+        <button class="btn_gh click_popup">احجز موعد الآن</button>
       </div>
       <div class="about_left">
         <img src="images/5.png" alt="about services">
@@ -384,7 +410,7 @@
     <div class="cta">
       <h2 class="m_P_gh">أخبرنا عن مشروعك وأهدافك لنتولى الأمر بعد ذلك</h2>
       <div class="btn_group">
-        <button class="btn_gh b_white">احجز موعد الآن</button>
+        <button class="btn_gh b_white click_popup">احجز موعد الآن</button>
         <button class="btn_gh">استشارة مجانية</button>
       </div>
     </div>

@@ -15,7 +15,35 @@
   <title>Mbtkron | Home</title>
 </head>
 <body>
-  <div class="moboverlay"></div>
+  
+<div class="moboverlay"></div>
+<div class="fixed_form">
+  <i class="las la-times clsoe_popup"></i>
+    <form>
+      <div class="group_form">
+        <input type="text" class="form-control" placeholder="الاسم بالكامل*">
+      </div>
+      <div class="group_form">
+        <input type="tel:" class="form-control" placeholder="رقم الجوال*">
+      </div>
+      <div class="group_form">
+        <div class="position_r">
+        <i class="las la-angle-down angle_select"></i>
+          <select name="region" id="region" required="">
+            <option value="">المدينة</option>
+            <option value="">الرياض</option>
+            <option value="">الرياض</option>
+        </select>
+        </div>
+      </div>
+      <div class="group_form">
+        <input type="text" class="form-control" placeholder="البريد الإلكتروني">
+      </div>
+    <div class="btn_div">
+      <button class="btn_gh btn_send form-submit">إرسال</button>
+    </div>
+  </form>
+</div>
 
 <!-- ~~~~~~~~~~~~~~~~start header~~~~~~~~~~~~~~~~~~~~~~ -->
 <header>
@@ -35,7 +63,7 @@
         <ul class="ul_gh ul_nav">
           <li><a href="#">من نحن</a></li>
           <li class="hover_menu">
-            <a href="#">خدماتنا</a>
+            <a href="service.html">خدماتنا</a>
             <ul class="ul_menu ul_gh">
               <li><a href="#">التسويق الإلكتروني</a></li>
               <li><a href="#">المؤتمرات والمعارض</a></li>
@@ -55,7 +83,7 @@
         <button class="btn_bars btn_gh">
           <i class="las la-bars"></i>
         </button>
-        <button class="btn_gh btn_appointment">احجز موعد</button>
+        <button class="btn_gh btn_appointment click_popup">احجز موعد</button>
       </div>
     </div>
   </div>
@@ -71,14 +99,14 @@
           <strong>نعمل معًا لتطوير خدماتك وأعمالك بإحترافية</strong>
         </h3>
         <div class="btn_group d-none d-sm-flex">
-          <button class="btn_gh">احجز موعد الآن</button>
+          <button class="btn_gh click_popup">احجز موعد الآن</button>
           <button class="btn_gh b_white">استشارة مجانية</button>
         </div>
       </div>
       <div class="intro_img">
         <img src="images/intro.png" alt="intro">
         <div class="btn_group d-flex d-sm-none">
-          <button class="btn_gh">احجز موعد الآن</button>
+          <button class="btn_gh click_popup">احجز موعد الآن</button>
           <button class="btn_gh b_white">استشارة مجانية</button>
         </div>
       </div>
@@ -132,17 +160,21 @@
             <strong>المؤتمرات والمعارض</strong>
           </h3>
           <p class="m_P_gh">نقدم خدمات تنظيم المعارض والمؤتمرات والفعاليات وتصنيع البوث بجميع الأشكال والأحجام</p>
-          <div class="btn_group">
+          <div class="btn_group d-none d-sm-flex">
             <button class="btn_gh b_white">اعرف المزيد</button>
-            <button class="btn_gh">احجز موعد الآن</button>
+            <button class="btn_gh click_popup">احجز موعد الآن</button>
           </div>
         </div>
         <div class="intro_img out_container">
           <img src="images/1.png" alt="intro">
+          <div class="btn_group d-flex d-sm-none">
+            <button class="btn_gh b_white">اعرف المزيد</button>
+            <button class="btn_gh click_popup">احجز موعد الآن</button>
+          </div>
         </div>
       </div>
       <div class="main_intro">
-        <div class="intro_img">
+        <div class="intro_img	d-none d-sm-block">
           <img src="images/2.png" alt="intro">
         </div>
         <div class="btn_section">
@@ -150,9 +182,12 @@
             <strong>الدعاية والإعلان</strong>
           </h3>
           <p class="m_P_gh">نقدم خدمات تصميم وتطوير الهويات التجارية والطباعة وتصميم التعبئة والتغليف</p>
+          <div class="intro_img	d-block d-sm-none">
+            <img src="images/2.png" alt="intro">
+          </div>
           <div class="btn_group">
             <button class="btn_gh b_white">اعرف المزيد</button>
-            <button class="btn_gh">احجز موعد الآن</button>
+            <button class="btn_gh click_popup">احجز موعد الآن</button>
           </div>
         </div>
 
@@ -163,17 +198,21 @@
             <strong>الإنتاج الإعلامي</strong>
           </h3>
           <p class="m_P_gh">نقدم خدمات تنظيم المعارض والمؤتمرات والفعاليات وتصنيع البوث بجميع الأشكال والأحجام</p>
-          <div class="btn_group">
+          <div class="btn_group d-none .d-sm-flex">
             <button class="btn_gh b_white">اعرف المزيد</button>
-            <button class="btn_gh">احجز موعد الآن</button>
+            <button class="btn_gh click_popup">احجز موعد الآن</button>
           </div>
         </div>
         <div class="intro_img">
           <img src="images/3.png" alt="intro">
+          <div class="btn_group d-flex .d-sm-none">
+            <button class="btn_gh b_white">اعرف المزيد</button>
+            <button class="btn_gh click_popup">احجز موعد الآن</button>
+          </div>
         </div>
       </div>
       <div class="main_intro">
-        <div class="intro_img">
+        <div class="intro_img d-none .d-sm-block">
           <img src="images/4.png" alt="intro">
         </div>
         <div class="btn_section">
@@ -181,9 +220,12 @@
             <strong>التسويق الإلكتروني</strong>
           </h3>
           <p class="m_P_gh">نقدم خدمات تصميم وتطوير الهويات التجارية والطباعة وتصميم التعبئة والتغليف</p>
+          <div class="intro_img d-block .d-sm-none">
+            <img src="images/4.png" alt="intro">
+          </div>
           <div class="btn_group">
             <button class="btn_gh b_white">اعرف المزيد</button>
-            <button class="btn_gh">احجز موعد الآن</button>
+            <button class="btn_gh click_popup">احجز موعد الآن</button>
           </div>
         </div>
       </div>
@@ -351,7 +393,7 @@
     <div class="cta">
       <h2 class="m_P_gh">أخبرنا عن مشروعك وأهدافك لنتولى الأمر بعد ذلك</h2>
       <div class="btn_group">
-        <button class="btn_gh b_white">احجز موعد الآن</button>
+        <button class="btn_gh b_white click_popup">احجز موعد الآن</button>
         <button class="btn_gh">استشارة مجانية</button>
       </div>
     </div>

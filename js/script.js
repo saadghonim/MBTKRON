@@ -2,33 +2,23 @@ const Nav = document.querySelector("nav");
 const close_ = document.querySelector(".close_");
 const btn_bars = document.querySelector(".btn_bars");
 const moboverlay = document.querySelector(".moboverlay");
-const hover_menu = document.querySelector(".hover_menu");
-const ul_menu = document.querySelector(".ul_menu");
 const body_ = document.querySelector("body");
 
 
 btn_bars.addEventListener("click", function() {
   Nav.classList.add("open_menu");
-  moboverlay.style.display = "block";
   body_.classList.add("over_");
 });
 close_.addEventListener("click", function() {
   Nav.classList.remove("open_menu");
-  moboverlay.style.display = "none";
   body_.classList.remove("over_");
-
 });
-moboverlay.addEventListener("click", function() {
-  Nav.classList.remove("open_menu");
-  moboverlay.style.display = "none";
-  body_.classList.remove("over_");
 
-});
 
 $(document).ready(function(){
   $(".drag_down, .click_a").click(function () {
     $('html, body').animate({
-        scrollTop: $("#about_").offset().top -100
+        scrollTop: $("#about_").offset().top -10
     }, 1000);
   });
   /*~~~~~~~~~~~~~~~~~start counter~~~~~~~~~~~~~ */
@@ -57,6 +47,17 @@ $('.reviews .owl-carousel').owlCarousel({
 $(".hover_menu").click(function(){
   $(".ul_menu").slideToggle("500")
 })
+// popUp
+$(".click_popup").click(function(){
+  $(".fixed_form").addClass("open_popup")
+  $(".moboverlay").fadeIn("500");
+  $("body").addClass("over_");
+});
+$(".moboverlay, .clsoe_popup").click(function(){
+  $(".fixed_form").removeClass("open_popup")
+  $(".moboverlay").fadeOut("500");
+  $("body").removeClass("over_");
+});
 
 if ($(window).width() <= 1200){
 $(".c1").unwrap('.block1, .block2')
