@@ -97,7 +97,7 @@ main{
 }
 @include xs{
   main{
-    margin-bottom: 60px;
+    margin-bottom: 40px;
   }
   .main_intro{
     flex-direction: column;
@@ -106,7 +106,6 @@ main{
   .btn_section{
     h3{
       font-size: 22px;
-      padding-top: 20px;
       margin-bottom: 40px;
 
     }

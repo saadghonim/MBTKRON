@@ -713,7 +713,7 @@ main {
 
 @media only screen and (max-width: 767px) {
   main {
-    margin-bottom: 60px;
+    margin-bottom: 40px;
   }
   .main_intro {
     -webkit-box-orient: vertical;
@@ -723,7 +723,6 @@ main {
   }
   .btn_section h3 {
     font-size: 22px;
-    padding-top: 20px;
     margin-bottom: 40px;
   }
   .main_intro img {
