@@ -1,0 +1,72 @@
+.cta_section{
+  background-image: url("../images/2.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 100px 0;
+  margin-bottom: 120px;
+}
+
+.cta{
+  text-align: center;
+  h2{
+    font-size: 40px;
+    font-weight: 700;
+    color: $color_1;
+    margin-bottom: 40px;
+    line-height: 1.2;
+
+  }
+  .btn_group{
+    justify-content: center;
+    button{
+      background-color: transparent;
+      color: $color_1;
+      border:2px solid #676f74;
+      &:hover{
+      background-color: $color_2;
+      color: $main_color;
+      }
+    }
+    button.b_white{
+      background-color: $color_2;
+      color: $main_color;
+      border-color: transparent;
+      &:hover{
+        background-color: transparent;
+        color: $color_1;
+        border-color: #676f74;
+      }
+    }
+  }
+}
+
+@include xs{
+  .cta_section{
+    background-attachment: inherit;
+    padding: 60px 0;
+    margin-bottom: 80px;
+  }
+  .cta{
+    text-align: center;
+    h2{
+      font-size: 22px;
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+    .btn_group{
+      justify-content: center;
+    }
+  }
+  .btn_group{
+    button{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 45px;
+      border-radius: 22.5px;
+      padding: 0 20px;
+      font-size: 14px;
+    }
+  } 
+
+}

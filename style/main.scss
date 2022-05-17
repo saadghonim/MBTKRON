@@ -1,0 +1,40 @@
+// abstracts or helpers
+@import './sass/abstracts/variables';
+@import './sass/abstracts/functions';
+@import './sass/abstracts/mixins';
+
+// base
+@import './sass/base/fonts';
+@import './sass/base/base';
+@import './sass/base/button';
+
+// pages
+@import './sass/pages/intro';
+
+// layout
+@import './sass/layout/header';
+@import './sass/layout/footer';
+
+
+// components
+@import './sass/components/intro';
+@import './sass/components/about-us';
+@import './sass/components/services';
+@import './sass/components/clients';
+@import './sass/components/reviews';
+@import './sass/components/faq';
+@import './sass/components/contact';
+@import './sass/pages/services';
+
+
+@import './sass/components/cta';
+@import './sass/components/pop_up';
+
+
+
+
+
+
+
+// button
+@import './sass/base/button';

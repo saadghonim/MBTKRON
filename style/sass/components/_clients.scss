@@ -1,0 +1,99 @@
+.clients_section{
+	background-color: $main_color;
+}
+.clients{
+	display: grid;
+	grid-template-columns: repeat(2, 40% 60%);
+	height: 720px;
+}
+.clients_content{
+	text-align: start;
+	width: 90%;
+	padding-top: 110px;
+	h2{
+		@include title_main;
+		text-align:start;
+		margin-bottom: 20px;
+	}
+	strong{
+		font-size: 30px; 
+		color: $color_1;
+		line-height: 1.667;
+		margin-bottom: 20px;
+		display: block;
+	}
+	p{
+		font-size: 22px;
+		color: $color_1;
+		font-weight: 400;
+	}
+}
+
+
+// ~~~~~~~~~~~slideup and down~~~~~~~~~~~~~~~~~~~~~
+.parent_slide{
+  position:relative;
+  width:100%;
+  height:100%;
+  background-color:transparent;
+  overflow:hidden;
+	text-align: end;
+
+}
+.block1,.block2, .block3{
+  position:absolute;
+  display:flex;
+  flex-wrap:wrap;
+  // width:200px;
+  >div{
+        margin-bottom: 20px!important;
+			img{
+				max-width: 100%;
+			}
+      }
+}
+.block1{
+  right:420px;
+	width: 247px;
+}
+.block2{
+  right:189px;
+	width: 211px;
+
+}
+.block3{
+  right:0px;
+	width: 169px;
+
+}
+.block1, .block2 , .block3{
+  animation-iteration-count: infinite;
+  animation-duration: 9s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+.block1 {
+  animation-name: slidedown;
+}
+.block2 {
+  animation-name: slideup;
+}
+  .block3{
+  animation-name: slidedown;
+  }
+@keyframes slidedown {
+  0% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes slideup {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}

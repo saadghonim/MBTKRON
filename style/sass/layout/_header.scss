@@ -1,0 +1,251 @@
+header{
+  padding-top: 10px;
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+div.btn_{
+  display: flex;
+  .btn_bars{
+    font-size: 22px;
+    color: $main_color;
+    margin-inline-end: 15px;
+    display: none;
+    &:hover{
+      color: $color_2
+    }
+    
+  }
+  .btn_appointment{
+    @include btn_appointment;
+    padding: 0 20px;
+    font-size: 14px;
+    border-radius: 21px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    line-height: 1.2;
+    &::before{
+      content: "";
+      font-family: "line awesome free";
+      font-weight: 900;
+      font-size: 22px;
+      margin-inline-end: 5px;
+    }
+  }
+}
+nav{
+  .close_{
+    font-size: 22px;
+    color: $main_color;
+    display: none;
+    position: absolute;
+    top: 20px;
+    @include ar{
+      left: 20px;
+    }
+    @include en{
+      right: 20px;
+    }
+    &:hover{
+      color: $color_2;
+    }
+  }
+  .ul_nav{
+    display: flex;
+    >li{
+      padding: 15px 0;
+      &:not(:last-child){
+        margin-inline-end: 30px;
+      }
+      >a{
+        font-size: 16px;
+        color: #253138;
+        font-weight: 400;
+        transition: .5s;
+        &:hover{
+          text-decoration: none;
+          color: $color_2;
+        }
+      }
+    }
+  }
+  .hover_menu{
+    position: relative;
+    &:hover{
+      .ul_menu{
+        visibility: visible;
+        opacity: 1;
+        z-index: 20;
+      }
+    }
+  }
+  .ul_menu{
+    background-color: rgba(37, 49, 56, 0.949);
+    padding: 20px 18px;
+    text-align: start;
+    min-width: 191px;
+    position: absolute;
+    top: 48px;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 0;
+    transition: .5s;
+    &::after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 0;
+      border-left: 7.5px solid transparent;
+      border-right: 7.5px solid transparent;
+      border-bottom: 8px solid $color_2;
+      position: absolute;
+      top: 0px;
+      opacity: 1;
+      transform: rotate(180deg);
+      @include ar{
+        right: 20px;
+      }
+      @include en{
+        left: 20px;
+      }
+  }
+    @include ar{
+      right: -20px;
+    }
+    @include en{
+      left: -20px;
+    }
+    li{
+      &:not(:last-child){
+        margin-bottom: 5px;
+      }
+      a{
+        color: $color_1;
+        font-weight: 400;
+        transition: .5s;
+        &:hover{
+          color: $color_2;
+          text-decoration: none;
+        }
+      }
+    }
+
+  }
+}
+
+.fixed_{
+  background-color: $color_1;
+  z-index: 50;
+  transition: .5s;
+  padding: 10px 0;
+  box-shadow: 0px 0px 5px 0px #0000001a;
+  img{
+    width: 80px;
+  }
+}
+.fixsedt {
+  top: -130px;
+}
+@include xs{
+  div.btn_{
+    .btn_bars{
+      display: block;
+    }
+    .btn_appointment{
+      padding: 0 15px;
+      font-size: 12px;
+      border-radius: 17.5px;
+      height: 35px;
+      &::before{
+        font-size: 20px;
+      }
+    }
+  }
+  nav{
+  transition: .5s;
+    .close_{
+      display: block;
+    }
+    position: fixed;
+    width: 320px;
+    height: 100%;
+    background-color: $color_1;
+    top: 0;
+    padding-top: 100px;
+    @include ar{
+      right: -100%;
+    }
+    @include en{
+      left: -100%;
+    }
+
+    .ul_nav{
+      padding-inline-start: 20px;
+      flex-direction: column;
+      align-items: start;
+      >li{
+        margin-bottom: 15px;
+        padding: 0;
+        a{
+          font-size: 18px;
+        }
+        &:not(:last-child) {
+          margin-inline-end: 0px;
+      }
+      }
+      >li{
+        a{
+          text-align: start;
+        }
+      }
+    }
+  }
+
+  .hover_menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    .ul_menu{
+      transition: inherit;
+      padding: 15px 10px;
+      position: static;
+      visibility: inherit;
+      opacity: 1;
+      z-index: 1;
+      background-color: transparent;
+      display: none;
+      li{
+        a{
+          color: $color_5;
+          text-align: start;
+        }
+      }
+      &::after{
+        display: none;
+      }
+    }
+  } 
+  header{
+    img{
+      width: 80px;
+    }
+  }
+}
+
+.open_menu{
+  @include ar{
+    right: 0!important;
+  }
+  @include en{
+    left: 0;
+  }
+}

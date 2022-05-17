@@ -1,0 +1,130 @@
+.faq_section{
+  margin-bottom: 130px;
+}
+.faq{
+  width: 75%;
+  margin: auto;
+  >h2{
+    margin-bottom: 30px;
+  }
+  .strong-title{
+    margin-bottom: 40px;
+  }
+}
+.strong-title{
+  font-size: 30px;
+  color: $main_color;
+  display: block;
+  text-align: center;
+}
+.title_main{
+  font-size: 24px;
+  color: #808080;
+  text-align: center;
+  text-transform: capitalize;
+}
+.collapse_parant{
+    display: flex;
+    background-color: #f7f7f7;
+    margin-bottom: 5px;
+    .number_c{
+      background-color: #f2f2f2;
+      width: 80px;
+      padding: 30px;
+      border-left: 2px solid #e8e8e8;
+      font-size: 18px;
+      display: flex;
+      justify-content: center;
+      transition: .5s;
+  
+      @include en{
+      border-right: 2px solid #e8e8e8;
+      }
+    }
+    .btn_collapse_, .number_c{
+      font-weight: 700;
+      color: $main_color;
+  
+    }
+    .group_collapse{
+      width: 100%;
+    }
+    .btn_collapse_{
+      padding: 30px;
+      width: 100%!important;
+      text-align: start;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      font-size: 18px;
+      text-transform: capitalize;
+      position: relative;
+    }
+    .toggle_collapse{
+      padding: 0 30px 30px 80px;
+      text-align: justify;
+      font-size: 16px;
+      color: #808080;
+      font-weight: 400;
+      line-height: 1.8;
+      display: none;
+    }
+  }
+  .icon-wrapper {
+    width: 16px;
+    height: 16px;
+    position: relative;
+  }
+  .bar {
+    position: absolute;
+      top: 11px;
+      height: 2px;
+      width: 16px;
+      background-color: $main_color;
+  }
+  .bar--horizontal {
+  transform: rotate(90deg);
+    transition: all ease 0.5s;
+  }
+  .bar--horizontal.is-active {
+  transform: rotate(540deg);
+  }
+  @keyframes minus {
+    100% {
+      transform: rotate(540deg);
+    }
+  }
+  @keyframes plus {
+    100% {
+      transform: rotate(540deg);
+    }
+  }
+  .minus {
+      animation: minus 0.5s ease;
+      animation-fill-mode: forwards;
+  }
+  .plus {
+    animation: plus 0.5s ease;
+      animation-fill-mode: forwards;
+  }
+  .poen_co{
+    color: $main_color!important;
+  }
+  .poen_backg{
+    background-color: $main_color!important;
+  }
+  @include xs{
+    .collapse_parant{
+      .btn_collapse_{
+        padding: 20px
+      }
+      .toggle_collapse {
+        padding: 0px 20px 20px ;
+      }
+      .number_c {
+        padding: 0;
+        padding-top: 30px;
+        width: 45px;
+      }
+    } 
+  }
