@@ -122,7 +122,7 @@
     }
     .collapse_parant{
       .btn_collapse_{
-        padding: 20px
+        padding: 20px 20px
       }
       .toggle_collapse {
         padding: 0px 20px 20px ;
@@ -130,9 +130,20 @@
       .number_c {
         padding: 0;
         padding-top: 20px;
-        width: 45px;
+        width: 40px;
       }
     } 
+    .icon-wrapper {
+      position: absolute;
+      top: 20px;
+      @include ar {
+      left: 10px;
+      }
+      @include en {
+        right: 10px;
+        }
+      
+  }
     .collapse_parant {
       .btn_collapse_{
         font-size: 16px;

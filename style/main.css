@@ -1453,7 +1453,7 @@ html[dir="ltr"] .collapse_parant .number_c {
     width: 100%;
   }
   .collapse_parant .btn_collapse_ {
-    padding: 20px;
+    padding: 20px 20px;
   }
   .collapse_parant .toggle_collapse {
     padding: 0px 20px 20px;
@@ -1461,7 +1461,17 @@ html[dir="ltr"] .collapse_parant .number_c {
   .collapse_parant .number_c {
     padding: 0;
     padding-top: 20px;
-    width: 45px;
+    width: 40px;
+  }
+  .icon-wrapper {
+    position: absolute;
+    top: 20px;
+  }
+  html[dir="rtl"] .icon-wrapper {
+    left: 10px;
+  }
+  html[dir="ltr"] .icon-wrapper {
+    right: 10px;
   }
   .collapse_parant .btn_collapse_ {
     font-size: 16px;
