@@ -44,15 +44,17 @@
   .services_section{
     clip-path: ellipse(250% 50% at 50% 50%);
     padding: 60px 0;
+    margin-bottom: 0px;
 
   }
+
   .services{
     >h3{
       margin-bottom: 40px;
     }
     .main_intro{
       grid-template-columns: repeat(1, 1fr);
-      margin-bottom: 30px;
+      margin-bottom: 50px;
       .intro_img{
         text-align: center;
       }
