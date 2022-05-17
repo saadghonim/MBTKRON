@@ -1,10 +1,15 @@
 .clients_section{
 	background-color: $main_color;
+  margin-bottom: 140px;
+
 }
 .clients{
 	display: grid;
 	grid-template-columns: repeat(2, 40% 60%);
 	height: 720px;
+  .owl-dots{
+    display: none;
+  }
 }
 .clients_content{
 	text-align: start;
@@ -68,7 +73,7 @@
 }
 .block1, .block2 , .block3{
   animation-iteration-count: infinite;
-  animation-duration: 9s;
+  animation-duration: 5s;
   animation-timing-function: linear;
   animation-fill-mode: forwards;
 }
@@ -96,4 +101,39 @@
   100% {
     transform: translateY(-50%);
   }
+}
+
+@include xs{
+  .services_section{
+    margin-bottom: 70px;
+
+  }
+  .clients_section{
+    padding-bottom: 40px;
+    margin-bottom: 50px;
+  }
+  .clients_content {
+    width: 100%;
+    padding-top: 60px;
+      strong {
+        font-size: 18px;
+
+    }
+    p{
+      font-size: 14px;
+      margin-bottom: 50px;
+    }
+  }
+  .clients{
+    grid-template-columns: inherit;
+    height: auto;
+    display: block
+  }
+}
+
+@include md{
+  // .parent_slide{
+  //   position: static;
+  // }
+
 }

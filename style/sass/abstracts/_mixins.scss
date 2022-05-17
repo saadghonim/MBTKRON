@@ -188,18 +188,18 @@
       bottom: 20px;
       left: 50%;
       transform: translatex(-50%);
-      // font-size: 18px;
       color: $main_color;
       z-index: 9999;
       .owl-dot{
-        width: 16px;
-        height: 3px;
-        background-color: #212121;
+        border-radius: 50%;
+        width: 8px;
+        height: 8px;
+        background-color: #cccccc;
         opacity: 0.5;
         margin-inline-end: 5px;
     }
     .active{
-      background-color: $main_color;
+      background-color: $color_2;
       opacity: 1;
       transform: scale(1.2);
       outline: 0;

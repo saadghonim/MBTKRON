@@ -172,11 +172,12 @@ nav{
   }
   nav{
   transition: .5s;
+  overflow-y: auto;
     .close_{
       display: block;
     }
     position: fixed;
-    width: 320px;
+    width: 270px;
     height: 100%;
     background-color: $color_1;
     top: 0;

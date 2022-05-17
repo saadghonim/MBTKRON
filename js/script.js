@@ -4,20 +4,24 @@ const btn_bars = document.querySelector(".btn_bars");
 const moboverlay = document.querySelector(".moboverlay");
 const hover_menu = document.querySelector(".hover_menu");
 const ul_menu = document.querySelector(".ul_menu");
+const body_ = document.querySelector("body");
 
 
 btn_bars.addEventListener("click", function() {
   Nav.classList.add("open_menu");
   moboverlay.style.display = "block";
-
+  body_.classList.add("over_");
 });
 close_.addEventListener("click", function() {
   Nav.classList.remove("open_menu");
   moboverlay.style.display = "none";
+  body_.classList.remove("over_");
+
 });
 moboverlay.addEventListener("click", function() {
   Nav.classList.remove("open_menu");
   moboverlay.style.display = "none";
+  body_.classList.remove("over_");
 
 });
 
@@ -48,14 +52,38 @@ $('.reviews .owl-carousel').owlCarousel({
       }
   }
 })
-// menu
+// sub menu
+
 $(".hover_menu").click(function(){
   $(".ul_menu").slideToggle("500")
-});
+})
 
-// tabs~~~~~~~~~~~~~~~~~~~~~~
+if ($(window).width() <= 1200){
+$(".c1").unwrap('.block1, .block2')
+$(".c2").unwrap('.block3')
 
+$(".c1 , .c2 , .c3").addClass("item")
+$(".parent_slide").addClass("owl-carousel")
 
+$('.clients .owl-carousel').owlCarousel({
+  loop:true,
+  nav:false,
+  margin:15,
+  autoplay:true,
+  rtl: $("html").attr("dir") == "rtl" ? true : false,
+  responsive:{
+      0:{
+          items:2
+      },
+      600:{
+          items:2
+      },
+      1000:{
+          items:5
+      }
+  }
+})
+};
 
 
 

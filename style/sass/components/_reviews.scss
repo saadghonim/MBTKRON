@@ -55,6 +55,19 @@
   }
 }
 @include xs{
+  .reviews_section {
+    margin-bottom: 70px;
+}
+  .reviews{
+    @include dots_;
+    .owl-dots{
+      bottom: -40px;
+    }
+    strong{
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+  }
   .item_reviews{
     p{
       width: 100%;

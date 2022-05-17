@@ -114,6 +114,12 @@
     background-color: $main_color!important;
   }
   @include xs{
+    .faq_section{
+      margin-bottom: 80px;
+    }
+    .faq{
+      width: 100%;
+    }
     .collapse_parant{
       .btn_collapse_{
         padding: 20px
@@ -127,4 +133,9 @@
         width: 45px;
       }
     } 
+    .collapse_parant {
+      .btn_collapse_{
+        font-size: 16px;
+      }
+    }
   }

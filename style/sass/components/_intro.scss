@@ -2,6 +2,7 @@ main{
   height: 100vh;
   display: flex;
   align-items: center;
+  margin-bottom: 110px;
 }
 .main_intro{
   display: flex;
@@ -95,18 +96,35 @@ main{
     }
 }
 @include xs{
+  main{
+    margin-bottom: 60px;
+  }
   .main_intro{
     flex-direction: column;
     
   }
   .btn_section{
     h3{
-      font-size: 26px;
+      font-size: 22px;
+      padding-top: 20px;
+      margin-bottom: 40px;
+
     }
   }
   .main_intro{
     img{
       max-width: 100%;
+      margin-bottom: 30px;
+    }
+  }
+  .drag_down_parant{
+    bottom: 15px;
+    .drag_down{
+      width: 20px;
+      height: 40px;
+      &::after{
+        left: 47%;
+      }
     }
   }
 }
