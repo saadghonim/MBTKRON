@@ -279,7 +279,8 @@ nav{
   transform: translate(-50%, -50%);
   left: 50%;
   top: -1000px;
-  background-color: rgba(255, 255, 255, .95);
+  // top: 50%;
+  background-color: rgba(255, 255, 255, .98);
   width: 100%;
   height:100% ;
   z-index: 111;
@@ -294,30 +295,16 @@ nav{
     width: calc(100vw - 30px);
     max-width: 541px;
     input, select{
-      padding: 0 45px;
+      padding: 0 20px;
     }
   }
   .group_form{
     position: relative;
-    .I_iconf{
-      position: absolute;
-      transform: translateY(-50%);
-      top:50%;
-      width: 20px;
-      font-size: 18px;
-      color: #808080;
-      @include ar{
-        right: 20px;
-      }
-      @include ar{
-        left: 20px;
-      }
-    }
+
   }
   .btn_send {
     width: 100%;
   }
-
   }
 
 .open_popup{
@@ -329,7 +316,7 @@ top: 50%!important;
 .clsoe_popup{
   font-size: 22px;
   position: absolute;
-  top: 100px;
+  top: 60px;
   color: $main_color;
   transition: .5s;
   transform: translateX(-50%);
@@ -339,4 +326,11 @@ top: 50%!important;
     color: $color_2;
   }
 
+}
+
+@include xs{
+  .clsoe_popup{
+    top: 50px;
+  
+  }
 }

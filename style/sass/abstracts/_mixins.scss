@@ -190,6 +190,8 @@
       transform: translatex(-50%);
       color: $main_color;
       z-index: 9999;
+      width: 100%;
+      text-align: center;
       .owl-dot{
         border-radius: 50%;
         width: 8px;

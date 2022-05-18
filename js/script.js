@@ -33,7 +33,7 @@ $('.counter').each(function() {
     countNum: countTo
   },
   {
-    duration: 2000,
+    duration: 3000,
     easing:'linear',
     step: function() {
       $this.text(Math.floor(this.countNum));
@@ -201,3 +201,5 @@ btn.on('click', function(e) {
 });
 
 
+var $disabledResults = $(".js-example-disabled-results");
+$disabledResults.select2()
