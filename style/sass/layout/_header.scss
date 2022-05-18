@@ -1,3 +1,6 @@
+*{
+  // transition: 7s !important;
+}
 header{
   padding-top: 10px;
   z-index: 90;
@@ -278,7 +281,7 @@ nav{
 .fixed_form{
   position: fixed;
   // right: -200%;
-  right: -100%;
+  right: -1000%;
   top: 0;
   bottom: 0;
   background-color: rgba(255, 255, 255, .98);
