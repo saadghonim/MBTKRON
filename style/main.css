@@ -2634,6 +2634,9 @@ footer p {
     -webkit-clip-path: ellipse(140% 50% at 50% 50%);
             clip-path: ellipse(140% 50% at 50% 50%);
   }
+  .services_section_ser .services_ser .size_img {
+    width: 60%;
+  }
 }
 
 .cta_section {
