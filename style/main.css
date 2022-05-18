@@ -104,6 +104,29 @@ figure {
   background: #ffc700;
 }
 
+.progress {
+  position: fixed;
+  left: 0px;
+  top: -14px;
+  width: 100%;
+  height: 20px;
+  z-index: 9999;
+  background-color: transparent;
+}
+
+.progress .bar {
+  background: #ffc700;
+  width: 0%;
+  height: 10px;
+}
+
+.percent {
+  position: absolute;
+  display: inline-block;
+  top: 3px;
+  left: 48%;
+}
+
 .btngh_ {
   height: 49px;
   font-size: 16px;
@@ -213,6 +236,11 @@ header {
           justify-content: space-between;
 }
 
+.header img {
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
 div.btn_ {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -222,8 +250,8 @@ div.btn_ {
 div.btn_ .btn_bars {
   font-size: 22px;
   color: #253138;
-  -webkit-margin-end: 15px;
-          margin-inline-end: 15px;
+  -webkit-margin-start: 15px;
+          margin-inline-start: 15px;
   display: none;
 }
 
@@ -242,6 +270,7 @@ div.btn_ .btn_appointment {
   font-size: 14px;
   border-radius: 21px;
   height: 42px;
+  min-width: 140px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -396,6 +425,7 @@ nav .ul_menu li a:hover {
 
 .fixed_ img {
   width: 80px;
+  height: auto;
 }
 
 .fixsedt {
@@ -514,7 +544,8 @@ nav .ul_menu li a:hover {
     display: none;
   }
   header img {
-    width: 80px;
+    width: 60px;
+    height: auto;
   }
 }
 
@@ -652,7 +683,7 @@ main {
 .drag_down_parant .drag_down {
   border: 2px solid #cccccc;
   width: 24px;
-  height: 49px;
+  height: 45px;
   display: block;
   margin: auto;
   border-radius: 25px;
@@ -668,7 +699,7 @@ main {
   position: absolute;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  left: 47%;
+  left: 45%;
   bottom: 2px;
   border-radius: 1px;
   -webkit-animation-name: animation_;
@@ -1014,8 +1045,8 @@ html[dir="ltr"] .services .out_container {
 .block1, .block2, .block3 {
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
-  -webkit-animation-duration: 9s;
-          animation-duration: 9s;
+  -webkit-animation-duration: 15s;
+          animation-duration: 15s;
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
   -webkit-animation-fill-mode: forwards;
@@ -1822,7 +1853,7 @@ footer p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-size: 16px;
+  font-size: 15px;
   color: #808080;
   font-weight: 400;
   margin-bottom: 100px;
@@ -1831,7 +1862,7 @@ footer p {
 .breadcrumb_ a {
   -webkit-margin-end: 10px;
           margin-inline-end: 10px;
-  font-size: 16px;
+  font-size: 15px;
   color: #808080;
   font-weight: 400;
 }
@@ -2049,6 +2080,10 @@ footer p {
   padding: 0px 15px;
 }
 
+.tabs_ li a.active {
+  color: #253138;
+}
+
 .tabs_ li a {
   font-size: 20px;
   font-weight: 400;
@@ -2120,11 +2155,23 @@ footer p {
   max-width: 100%;
 }
 
+.img_360d::after {
+  content: url("../images/1.svg");
+  -webkit-filter: invert(100%) sepia(0%) saturate(1%) hue-rotate(228deg) brightness(102%) contrast(101%);
+          filter: invert(100%) sepia(0%) saturate(1%) hue-rotate(228deg) brightness(102%) contrast(101%);
+  position: absolute;
+  width: 70px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+
 .work_img {
   position: relative;
 }
 
-.work_img i, .work_img .svg_img {
+.work_img i {
   position: absolute;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -2134,10 +2181,13 @@ footer p {
   color: #ffffff;
 }
 
-.work_img .svg_img {
-  width: 70px;
-  -webkit-filter: invert(100%) sepia(0%) saturate(1%) hue-rotate(228deg) brightness(102%) contrast(101%);
-          filter: invert(100%) sepia(0%) saturate(1%) hue-rotate(228deg) brightness(102%) contrast(101%);
+.gall_hover a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
 }
 
 @media only screen and (max-width: 991px) {
@@ -2218,8 +2268,11 @@ footer p {
 }
 
 .cta_section {
-  background-image: url("../images/2.jpg");
+  background-image: url("../images/cta.png");
+  background-color: #253138;
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   background-attachment: fixed;
   padding: 100px 0;
   margin-bottom: 120px;
@@ -2252,6 +2305,7 @@ footer p {
 .cta .btn_group button:hover {
   background-color: #ffc700;
   color: #253138;
+  border-color: #ffc700;
 }
 
 .cta .btn_group button.b_white {

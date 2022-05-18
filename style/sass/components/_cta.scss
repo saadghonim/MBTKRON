@@ -1,6 +1,9 @@
 .cta_section{
-  background-image: url("../images/2.jpg");
+  background-image: url("../images/cta.png");
+  background-color: $main_color;
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   background-attachment: fixed;
   padding: 100px 0;
   margin-bottom: 120px;
@@ -25,6 +28,7 @@
       &:hover{
       background-color: $color_2;
       color: $main_color;
+      border-color: $color_2;
       }
     }
     button.b_white{
@@ -70,3 +74,7 @@
   } 
 
 }
+
+
+
+

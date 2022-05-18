@@ -10,14 +10,16 @@ header{
   display: flex;
   align-items: center;
   justify-content: space-between;
-
+  img{
+    transition: .5s;
+  }
 }
 div.btn_{
   display: flex;
   .btn_bars{
     font-size: 22px;
     color: $main_color;
-    margin-inline-end: 15px;
+    margin-inline-start: 15px;
     display: none;
     &:hover{
       color: $color_2
@@ -30,6 +32,7 @@ div.btn_{
     font-size: 14px;
     border-radius: 21px;
     height: 42px;
+    min-width: 140px;
     display: flex;
     align-items: center;
     line-height: 1.2;
@@ -150,6 +153,8 @@ nav{
   box-shadow: 0px 0px 5px 0px #0000001a;
   img{
     width: 80px;
+    height: auto;
+
   }
 }
 .fixsedt {
@@ -251,7 +256,8 @@ nav{
   } 
   header{
     img{
-      width: 80px;
+      width: 60px;
+      height: auto;
     }
   }
 }

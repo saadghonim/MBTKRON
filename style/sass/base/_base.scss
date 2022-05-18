@@ -60,3 +60,25 @@ figure{margin: 0;}
 
   }
   
+  .progress {
+    position: fixed;
+    left: 0px;
+    top: -14px;
+    width: 100%;
+    height: 20px;
+    z-index: 9999;
+    background-color: transparent;
+    .bar { 
+      background:$color_2;
+      width:0%; 
+      height:10px; 
+    }
+  }
+
+  .percent { 
+    position:absolute; 
+    display:inline-block; 
+    top:3px; 
+    left:48%; 
+  }
+  

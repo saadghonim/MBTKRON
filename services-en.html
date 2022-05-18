@@ -8,11 +8,20 @@
   <link rel="icon" href="images/fav.png" type="image/png">
   <link rel="stylesheet" href="style/owl.carousel.min.css">
   <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"/>
   <link rel="stylesheet" href="style/bootstrap.min.css">
   <link rel="stylesheet" href="style/main.css">
   <title>Mbtkron | Services</title>
 </head>
 <body>
+  <!-- preload progress -->
+<div class="progress_preload">
+  <div class='progress' id="progress_div">
+    <div class='bar' id='bar1'></div>
+  </div>
+  <input type="hidden" id="progress_width" value="0">
+</div>
+
   <div class="moboverlay"></div>
   <div class="fixed_form">
     <i class="las la-times clsoe_popup"></i>
@@ -48,7 +57,7 @@
       <div class="logo">
         <a href="index.html">
           <figure>
-            <img src="images/logo.png" alt="MBTKRON logo">
+            <img src="images/logo.png" width="109" height="97" alt="MBTKRON logo">
           </figure>
         </a>
       </div>
@@ -76,10 +85,10 @@
         </ul>
       </nav>
       <div class="btn_">
+        <button class="btn_gh btn_appointment click_popup">book an appointment</button>
         <button class="btn_bars btn_gh">
           <i class="las la-bars"></i>
         </button>
-        <button class="btn_gh btn_appointment click_popup">book an appointment</button>
       </div>
     </div>
   </div>
@@ -169,7 +178,7 @@
       <a class="" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">photographer</a>
     </li>
     <li class="nav-item" role="presentation">
-      <a class="" id="pills-profile-tab" data-toggle="pill" href="#pills-profile2" role="tab" aria-controls="pills-profile" aria-selected="false">360 . photography</a>
+      <a class="" id="pills-profile-tab" data-toggle="pill" href="#pills-profile2" role="tab" aria-controls="pills-profile" aria-selected="false">360 . photography </a>
     </li>
     <li class="nav-item" role="presentation">
       <a class="" id="pills-contact-tab" data-toggle="pill" href="#pills-contact3" role="tab" aria-controls="pills-contact" aria-selected="false">Drone photography</a>
@@ -183,19 +192,27 @@
       <div class="tabs_content">
         <div class="work_img">
           <img src="images/services/1.jpg" alt="work_img">
+          <div class="gall_hover"><a href="images/services/1.jpg" data-caption="image 1" data-fancybox="image">
           <i class="las la-play-circle"></i>
+          </a></div>
         </div>
         <div class="work_img">
           <img src="images/services/2.jpg" alt="work_img">
-          <i class="las la-play-circle"></i>
+          <div class="gall_hover"><a href="images/services/2.jpg" data-caption="image 2" data-fancybox="image">
+            <i class="las la-play-circle"></i>
+            </a></div>
         </div>
         <div class="work_img">
           <img src="images/services/3.jpg" alt="work_img">
-          <i class="las la-play-circle"></i>
+          <div class="gall_hover"><a href="images/services/3.jpg" data-caption="image 3" data-fancybox="image">
+            <i class="las la-play-circle"></i>
+            </a></div>
         </div>
         <div class="work_img">
           <img src="images/services/4.jpg" alt="work_img">
-          <i class="las la-play-circle"></i>
+          <div class="gall_hover"><a href="images/services/3.jpg" data-caption="image 4" data-fancybox="image">
+            <i class="las la-play-circle"></i>
+            </a></div>
         </div>
       </div>
     </div>
@@ -203,19 +220,27 @@
       <div class="tabs_content">
         <div class="work_img">
           <img src="images/services/1.jpg" alt="work_img">
+          <div class="gall_hover"><a href="images/services/1.jpg" data-caption="image 1" data-fancybox="image">
           <i class="las la-play-circle"></i>
+          </a></div>
         </div>
         <div class="work_img">
           <img src="images/services/2.jpg" alt="work_img">
-          <i class="las la-play-circle"></i>
+          <div class="gall_hover"><a href="images/services/2.jpg" data-caption="image 2" data-fancybox="image">
+            <i class="las la-play-circle"></i>
+            </a></div>
         </div>
         <div class="work_img">
           <img src="images/services/3.jpg" alt="work_img">
-          <i class="las la-play-circle"></i>
+          <div class="gall_hover"><a href="images/services/3.jpg" data-caption="image 3" data-fancybox="image">
+            <i class="las la-play-circle"></i>
+            </a></div>
         </div>
         <div class="work_img">
           <img src="images/services/4.jpg" alt="work_img">
-          <i class="las la-play-circle"></i>
+          <div class="gall_hover"><a href="images/services/3.jpg" data-caption="image 4" data-fancybox="image">
+            <i class="las la-play-circle"></i>
+            </a></div>
         </div>
       </div>
     </div>
@@ -223,39 +248,52 @@
       <div class="tabs_content">
         <div class="work_img">
           <img src="images/services/1.jpg" alt="work_img">
+          <div class="gall_hover"><a href="images/services/1.jpg" data-caption="image 1" data-fancybox="image">
           <i class="las la-play-circle"></i>
+          </a></div>
         </div>
         <div class="work_img">
           <img src="images/services/2.jpg" alt="work_img">
-          <i class="las la-play-circle"></i>
+          <div class="gall_hover"><a href="images/services/2.jpg" data-caption="image 2" data-fancybox="image">
+            <i class="las la-play-circle"></i>
+            </a></div>
         </div>
         <div class="work_img">
           <img src="images/services/3.jpg" alt="work_img">
-          <i class="las la-play-circle"></i>
+          <div class="gall_hover"><a href="images/services/3.jpg" data-caption="image 3" data-fancybox="image">
+            <i class="las la-play-circle"></i>
+            </a></div>
         </div>
         <div class="work_img">
           <img src="images/services/4.jpg" alt="work_img">
-          <i class="las la-play-circle"></i>
+          <div class="gall_hover"><a href="images/services/3.jpg" data-caption="image 4" data-fancybox="image">
+            <i class="las la-play-circle"></i>
+            </a></div>
         </div>
       </div>
     </div>
     <div class="tab-pane fade" id="pills-profile2" role="tabpanel" aria-labelledby="pills-profile-tab">
       <div class="tabs_content">
-        <div class="work_img">
+        <div class="work_img img_360d">
           <img src="images/services/1.jpg" alt="work_img">
-          <img src="images/1.svg" alt="svg_img" class="svg_img">
+          <div class="gall_hover"><a href="images/services/1.jpg" data-caption="image 1" data-fancybox="image">
+            
+            </a></div>
         </div>
-        <div class="work_img">
+        <div class="work_img img_360d">
           <img src="images/services/2.jpg" alt="work_img">
-          <img src="images/1.svg" alt="svg_img" class="svg_img">
+          <div class="gall_hover"><a href="images/services/1.jpg" data-caption="image 2" data-fancybox="image">
+            </a></div>
         </div>
-        <div class="work_img">
+        <div class="work_img img_360d">
           <img src="images/services/3.jpg" alt="work_img">
-          <img src="images/1.svg" alt="svg_img" class="svg_img">
+          <div class="gall_hover"><a href="images/services/1.jpg" data-caption="image 3" data-fancybox="image">
+            </a></div>
         </div>
-        <div class="work_img">
+        <div class="work_img img_360d">
           <img src="images/services/4.jpg" alt="work_img">
-          <img src="images/1.svg" alt="svg_img" class="svg_img">
+          <div class="gall_hover"><a href="images/services/1.jpg" data-caption="image 4" data-fancybox="image">
+            </a></div>
         </div>
       </div>
     </div>
@@ -263,19 +301,27 @@
       <div class="tabs_content">
         <div class="work_img">
           <img src="images/services/1.jpg" alt="work_img">
+          <div class="gall_hover"><a href="images/services/1.jpg" data-caption="image 1" data-fancybox="image">
           <i class="las la-play-circle"></i>
+          </a></div>
         </div>
         <div class="work_img">
           <img src="images/services/2.jpg" alt="work_img">
-          <i class="las la-play-circle"></i>
+          <div class="gall_hover"><a href="images/services/2.jpg" data-caption="image 2" data-fancybox="image">
+            <i class="las la-play-circle"></i>
+            </a></div>
         </div>
         <div class="work_img">
           <img src="images/services/3.jpg" alt="work_img">
-          <i class="las la-play-circle"></i>
+          <div class="gall_hover"><a href="images/services/3.jpg" data-caption="image 3" data-fancybox="image">
+            <i class="las la-play-circle"></i>
+            </a></div>
         </div>
         <div class="work_img">
           <img src="images/services/4.jpg" alt="work_img">
-          <i class="las la-play-circle"></i>
+          <div class="gall_hover"><a href="images/services/3.jpg" data-caption="image 4" data-fancybox="image">
+            <i class="las la-play-circle"></i>
+            </a></div>
         </div>
       </div>
     </div>
@@ -283,19 +329,27 @@
       <div class="tabs_content">
         <div class="work_img">
           <img src="images/services/1.jpg" alt="work_img">
+          <div class="gall_hover"><a href="images/services/1.jpg" data-caption="image 1" data-fancybox="image">
           <i class="las la-play-circle"></i>
+          </a></div>
         </div>
         <div class="work_img">
           <img src="images/services/2.jpg" alt="work_img">
-          <i class="las la-play-circle"></i>
+          <div class="gall_hover"><a href="images/services/2.jpg" data-caption="image 2" data-fancybox="image">
+            <i class="las la-play-circle"></i>
+            </a></div>
         </div>
         <div class="work_img">
           <img src="images/services/3.jpg" alt="work_img">
-          <i class="las la-play-circle"></i>
+          <div class="gall_hover"><a href="images/services/3.jpg" data-caption="image 3" data-fancybox="image">
+            <i class="las la-play-circle"></i>
+            </a></div>
         </div>
         <div class="work_img">
           <img src="images/services/4.jpg" alt="work_img">
-          <i class="las la-play-circle"></i>
+          <div class="gall_hover"><a href="images/services/3.jpg" data-caption="image 4" data-fancybox="image">
+            <i class="las la-play-circle"></i>
+            </a></div>
         </div>
       </div>
     </div>
@@ -511,6 +565,7 @@
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
   <script src="js/owl.carousel.min.js"></script>
   <script src="js/script.js"></script>
 

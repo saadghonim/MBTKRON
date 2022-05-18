@@ -14,7 +14,15 @@
   <title>Mbtkron | Home</title>
 </head>
 <body>
-  
+
+<!-- preload progress -->
+<div class="progress_preload">
+  <div class='progress' id="progress_div">
+    <div class='bar' id='bar1'></div>
+  </div>
+  <input type="hidden" id="progress_width" value="0">
+</div>
+
 <div class="moboverlay"></div>
 <div class="fixed_form">
   <i class="las la-times clsoe_popup"></i>
@@ -51,7 +59,7 @@
       <div class="logo">
         <a href="index.html">
           <figure>
-            <img src="images/logo.png" alt="MBTKRON logo">
+            <img src="images/logo.png" width="109"  alt="MBTKRON logo">
           </figure>
         </a>
       </div>
@@ -79,10 +87,10 @@
         </ul>
       </nav>
       <div class="btn_">
+        <button class="btn_gh btn_appointment click_popup">احجز موعد</button>
         <button class="btn_bars btn_gh">
           <i class="las la-bars"></i>
         </button>
-        <button class="btn_gh btn_appointment click_popup">احجز موعد</button>
       </div>
     </div>
   </div>

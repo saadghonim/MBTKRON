@@ -4,7 +4,7 @@ const btn_bars = document.querySelector(".btn_bars");
 const moboverlay = document.querySelector(".moboverlay");
 const body_ = document.querySelector("body");
 
-
+// menu 
 btn_bars.addEventListener("click", function() {
   Nav.classList.add("open_menu");
   body_.classList.add("over_");
@@ -13,17 +13,39 @@ close_.addEventListener("click", function() {
   Nav.classList.remove("open_menu");
   body_.classList.remove("over_");
 });
-
+// ~~~~~~~~~~~~~~~
 
 $(document).ready(function(){
-  $(".drag_down, .click_a").click(function () {
-    $('html, body').animate({
-        scrollTop: $("#about_").offset().top -10
-    }, 1000);
-  });
-  /*~~~~~~~~~~~~~~~~~start counter~~~~~~~~~~~~~ */
 
-/*~~~~~~~~~~~~~~~~~end counter~~~~~~~~~~~~~ */
+// ~~~~~~~~~~~~~~~~~~~drag_down
+$(".drag_down, .click_a").click(function () {
+  $('html, body').animate({
+      scrollTop: $("#about_").offset().top -10
+  }, 1000);
+});
+// ~~~~~~~~~~~~~~~
+
+//~~~~~~~~~~~~~~~~counte
+$('.counter').each(function() {
+  var $this = $(this),
+      countTo = $this.attr('data-count');
+  $({ countNum: $this.text()}).animate({
+    countNum: countTo
+  },
+  {
+    duration: 2000,
+    easing:'linear',
+    step: function() {
+      $this.text(Math.floor(this.countNum));
+    },
+    complete: function() {
+      $this.text(this.countNum);
+    }
+  });  
+});
+// ~~~~~~~~~~~~~~~
+
+// ~~~~~~~~~~~~~~~~reviews
 $('.reviews .owl-carousel').owlCarousel({
   loop:true,
   nav:true,
@@ -42,8 +64,9 @@ $('.reviews .owl-carousel').owlCarousel({
       }
   }
 })
-// sub menu
+// ~~~~~~~~~~~~~~~
 
+// sub menu
 $(".hover_menu").click(function(){
   $(".ul_menu").slideToggle("500")
 })
@@ -58,7 +81,9 @@ $(".moboverlay, .clsoe_popup").click(function(){
   $(".moboverlay").fadeOut("500");
   $("body").removeClass("over_");
 });
+// ~~~~~~~~~~~~~~~
 
+// ~~~~~~~~~~~~~~services
 if ($(window).width() <= 1200){
 $(".c1").unwrap('.block1, .block2')
 $(".c2").unwrap('.block3')
@@ -85,44 +110,19 @@ $('.clients .owl-carousel').owlCarousel({
   }
 })
 };
-
-
-
-
-
-
-});
-
-$('.counter').each(function() {
-  var $this = $(this),
-      countTo = $this.attr('data-count');
-  $({ countNum: $this.text()}).animate({
-    countNum: countTo
-  },
-  {
-    duration: 5000,
-    easing:'linear',
-    step: function() {
-      $this.text(Math.floor(this.countNum));
-    },
-    complete: function() {
-      $this.text(this.countNum);
-      //alert('finished');
-    }
-  });  
-});
+// ~~~~~~~~~~~~~~~
 
 // collapse~~~~~~~~
-$(document).ready(function(){
-  $('.btn_collapse_').click(function(){
-    var toggle = $(this).next('.toggle_collapse');
-    $(toggle).slideToggle("slow").prev(".color_toggle").toggleClass("poen_co");
-    $(toggle).prev().children().children(".backg_toggle").toggleClass("poen_backg");
-    $(toggle).parent().prev(".color_toggle").toggleClass("poen_co"); 
-    $(this).children().children('.bar--horizontal').toggleClass("is-active");
-  });
+$('.btn_collapse_').click(function(){
+  var toggle = $(this).next('.toggle_collapse');
+  $(toggle).slideToggle("slow").prev(".color_toggle").toggleClass("poen_co");
+  $(toggle).prev().children().children(".backg_toggle").toggleClass("poen_backg");
+  $(toggle).parent().prev(".color_toggle").toggleClass("poen_co"); 
+  $(this).children().children('.bar--horizontal').toggleClass("is-active");
 });
+// ~~~~~~~~~~~~~~~
 
+//~~~~~~~~~ fixed header
 $(window).on('scroll', function() {
   if($(window).scrollTop() > 150) {
         $("header").addClass("fixed_");
@@ -130,7 +130,6 @@ $(window).on('scroll', function() {
       $("header").removeClass("fixed_");
   };
 });
-
 var fixedBar = document.querySelector("header"),
   prevScrollpos = $(window).scrollTop();
 
@@ -138,4 +137,51 @@ window.onscroll = function() {
   var o = $(window).scrollTop();
   prevScrollpos < o && prevScrollpos > 0 ? fixedBar.classList.add("fixsedt") : fixedBar.classList.remove("fixsedt"), prevScrollpos = o
 }, document.documentElement.style.setProperty("--animate-duration", ".5s");
+// ~~~~~~~~~~~~~~~
+
+
+
+
+});
+// ~~~~~~~~~~~~~~preload~~~~~~~~~~~~~~
+document.onreadystatechange = function(e)
+{
+  if(document.readyState=="interactive")
+  {
+    var all = document.getElementsByTagName("*");
+    for (var i=0, max=all.length; i < max; i++) 
+    {
+      set_ele(all[i]);
+    }
+  }
+}
+function check_element(ele)
+{
+  var all = document.getElementsByTagName("*");
+  var totalele=all.length;
+  var per_inc=100/all.length;
+
+  if($(ele).on())
+  {
+    var prog_width=per_inc+Number(document.getElementById("progress_width").value);
+    document.getElementById("progress_width").value=prog_width;
+    $("#bar1").animate({width:prog_width+"%"},3,function(){
+      if(document.getElementById("bar1").style.width=="100%")
+      {
+        $(".progress").fadeOut("slow");
+      }			
+    });
+  }
+
+  else	
+  {
+    set_ele(ele);
+  }
+}
+function set_ele(set_element)
+{
+  check_element(set_element);
+}
+// ~~~~~~~~~~~~~~~~~~~~~
+
 
