@@ -1,14 +1,19 @@
 .cta_section{
-  background-image: url("../images/cta.png");
+  // background-image: url("../images/cta.png");
   background-color: $main_color;
-  // background-size: cover;
   // background-position: center;
   // background-repeat: no-repeat;
-  // background-attachment: fixed;
   padding: 100px 0;
   margin-bottom: 120px;
+  position: relative;
 }
-
+.ctaback{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  max-width: 100%;
+}
 .cta{
   text-align: center;
   h2{
