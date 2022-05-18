@@ -627,14 +627,54 @@ html[dir="ltr"] .open_menu {
           transform: translate(-50%, -50%);
   left: 50%;
   top: -1000px;
-  background-color: #ffffff;
-  width: calc(100vw - 30px);
-  max-width: 450px;
+  background-color: rgba(255, 255, 255, 0.95);
+  width: 100%;
+  height: 100%;
   z-index: 111;
-  text-align: start;
+  text-align: center;
   padding: 60px 30px 40px;
   -webkit-transition: .5s;
   transition: .5s;
+}
+
+.fixed_form form {
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  width: calc(100vw - 30px);
+  max-width: 541px;
+}
+
+.fixed_form form input, .fixed_form form select {
+  padding: 0 45px;
+}
+
+.fixed_form .group_form {
+  position: relative;
+}
+
+.fixed_form .group_form .I_iconf {
+  position: absolute;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  top: 50%;
+  width: 20px;
+  font-size: 18px;
+  color: #808080;
+}
+
+html[dir="rtl"] .fixed_form .group_form .I_iconf {
+  right: 20px;
+}
+
+html[dir="rtl"] .fixed_form .group_form .I_iconf {
+  left: 20px;
+}
+
+.fixed_form .btn_send {
+  width: 100%;
 }
 
 .open_popup {
@@ -644,23 +684,18 @@ html[dir="ltr"] .open_menu {
 .clsoe_popup {
   font-size: 22px;
   position: absolute;
-  top: 20px;
+  top: 100px;
   color: #253138;
   -webkit-transition: .5s;
   transition: .5s;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  left: 50%;
   cursor: pointer;
 }
 
 .clsoe_popup:hover {
   color: #ffc700;
-}
-
-html[dir="rtl"] .clsoe_popup {
-  left: 20px;
-}
-
-html[dir="ltr"] .clsoe_popup {
-  left: 20px;
 }
 
 main {
@@ -2497,122 +2532,6 @@ footer p {
     border-radius: 22.5px;
     padding: 0 20px;
     font-size: 14px;
-  }
-}
-
-.pop_up_parant {
-  position: fixed;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%;
-  z-index: 1000;
-  display: none;
-  background-color: #253138;
-  width: calc(100% - 30px);
-  max-width: 770px;
-  margin: auto;
-  padding: 30px 0 30px;
-}
-
-.pop_up_parant .pop_backgr {
-  position: absolute;
-  bottom: 0;
-}
-
-html[dir="rtl"] .pop_up_parant .pop_backgr {
-  left: 0;
-}
-
-html[dir="ltr"] .pop_up_parant .pop_backgr {
-  right: 0;
-  -webkit-transform: scaleX(-1);
-          transform: scaleX(-1);
-}
-
-.pop_up_parant .pop_up .logo {
-  padding: 35px 35px 30px 35px;
-  text-align: center;
-}
-
-.pop_up_parant .pop_up .pop_text {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.pop_up_parant .pop_up .pop_text img {
-  margin-bottom: 10px;
-}
-
-.pop_up_parant .pop_up .pop_text p {
-  font-size: 20px;
-  color: #ffffff;
-  width: 50%;
-  text-align: center;
-  margin-bottom: 25px;
-  font-weight: 500;
-}
-
-.pop_up_parant .pop_up .pop_text button {
-  background-color: #ffc700;
-  color: #253138;
-  min-width: 165px;
-}
-
-.pop_up_parant .pop_up .pop_text button:hover {
-  -webkit-transform: translateY(-5px);
-          transform: translateY(-5px);
-}
-
-.pop_up_parant .pop_up .linear_ {
-  position: absolute;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  left: 50%;
-  top: -40px;
-  font-size: 24px;
-  color: #ffffff;
-  z-index: 100;
-  -webkit-transition: .5s;
-  transition: .5s;
-  cursor: pointer;
-}
-
-.pop_up_parant .pop_up .linear_:hover {
-  color: #ffc700;
-}
-
-@media only screen and (max-width: 767px) {
-  .pop_up_parant {
-    height: auto;
-    padding-bottom: 30px;
-  }
-  .pop_up_parant .pop_backgr {
-    display: none;
-  }
-  .pop_up_parant .pop_up .logo {
-    padding: 20px;
-  }
-  .pop_up_parant .pop_up .logo img {
-    width: 150px;
-  }
-  .pop_up_parant .pop_up .pop_text img {
-    width: 140px;
-    margin-bottom: 10px;
-  }
-  .pop_up_parant .pop_up .pop_text p {
-    width: 90%;
-  }
-  .pop_up_parant .pop_up .pop_text button {
-    min-width: 150px;
   }
 }
 
