@@ -127,8 +127,9 @@
     flex-wrap: wrap;
     justify-content: center;
     .size_img{
-      height: 90px;
-      margin-bottom: 30px;
+      height: 150px;
+      width: 100%;
+      margin-bottom: 10px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -155,7 +156,7 @@
       }
       text-align: center;
       padding: 30px 0 20px;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
       img{
         max-width: 100%;
       }

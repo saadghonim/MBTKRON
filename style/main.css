@@ -39,6 +39,10 @@ figure {
   margin: 0;
 }
 
+img {
+  image-rendering: -webkit-optimize-contrast;
+}
+
 .m_P_gh {
   padding: 0;
   margin: 0;
@@ -1025,6 +1029,7 @@ html[dir="ltr"] .services .out_container {
 
 .services .main_intro_ser img {
   max-width: 100%;
+  width: 80%;
 }
 
 .services .main_intro_ser .intro_img {
@@ -2312,8 +2317,9 @@ footer p {
 }
 
 .services_section_ser .services_ser .size_img {
-  height: 90px;
-  margin-bottom: 30px;
+  height: 150px;
+  width: 100%;
+  margin-bottom: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2342,7 +2348,7 @@ footer p {
           justify-content: center;
   text-align: center;
   padding: 30px 0 20px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .services_section_ser .services_ser .item_services > h3 {
