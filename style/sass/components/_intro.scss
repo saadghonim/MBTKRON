@@ -25,7 +25,7 @@ main{
   button{
     @include btn_appointment;
     height: 50px;
-    padding: 0 40px;
+    padding: 0 20px;
     border-radius: 25px;
     color: $main_color;
     &:not(:last-child){

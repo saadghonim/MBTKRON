@@ -35,7 +35,7 @@ div.btn_{
     min-width: 140px;
     display: flex;
     align-items: center;
-    line-height: 1.2;
+    line-height: 1.6;
     justify-content: center;
     &::before{
       content: "";
@@ -138,6 +138,7 @@ nav{
         color: $color_1;
         font-weight: 400;
         transition: .5s;
+        font-size: 15px;
         &:hover{
           color: $color_2;
           text-decoration: none;
@@ -276,10 +277,10 @@ nav{
 
 .fixed_form{
   position: fixed;
-  transform: translate(-50%, -50%);
-  left: 50%;
-  top: -1000px;
-  // top: 50%;
+  // right: -200%;
+  right: -100%;
+  top: 0;
+  bottom: 0;
   background-color: rgba(255, 255, 255, .98);
   width: 100%;
   height:100% ;
@@ -306,12 +307,13 @@ nav{
     width: 100%;
   }
   }
-
 .open_popup{
-top: 50%!important;
-
+right: 0
   
 }
+.close_popup{
+  left: -100%!important;
+  }
 
 .clsoe_popup{
   font-size: 22px;
@@ -326,6 +328,31 @@ top: 50%!important;
     color: $color_2;
   }
 
+}
+@keyframes inscreen {
+  0% {
+    right: -100%;
+  }
+  100% {
+    right: 0;
+  }
+}
+.inscreen {
+  animation: inscreen 0.4s ease forwards;
+}
+
+@keyframes outscreen {
+  0% {
+    right: auto;
+    left: 0;
+  }
+  100% {
+    right: auto;
+    left: -100%;
+  }
+}
+.outscreen {
+  animation: outscreen 0.5s ease forwards;
 }
 
 @include xs{

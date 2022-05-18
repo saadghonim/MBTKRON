@@ -111,7 +111,7 @@ img {
 .progress {
   position: fixed;
   left: 0px;
-  top: -14px;
+  top: -12px;
   width: 100%;
   height: 20px;
   z-index: 9999;
@@ -121,7 +121,7 @@ img {
 .progress .bar {
   background: #ffc700;
   width: 0%;
-  height: 10px;
+  height: 5px;
 }
 
 .percent {
@@ -318,7 +318,7 @@ div.btn_ .btn_appointment {
   -webkit-transition: .5s;
   transition: .5s;
   color: #253138;
-  border: 1px solid transparent;
+  border: 2px solid transparent;
   font-weight: 700;
   min-width: 180px;
   text-transform: capitalize;
@@ -333,7 +333,7 @@ div.btn_ .btn_appointment {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  line-height: 1.2;
+  line-height: 1.6;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -474,6 +474,7 @@ nav .ul_menu li a {
   font-weight: 400;
   -webkit-transition: .5s;
   transition: .5s;
+  font-size: 15px;
 }
 
 nav .ul_menu li a:hover {
@@ -627,10 +628,9 @@ html[dir="ltr"] .open_menu {
 
 .fixed_form {
   position: fixed;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  left: 50%;
-  top: -1000px;
+  right: -100%;
+  top: 0;
+  bottom: 0;
   background-color: rgba(255, 255, 255, 0.98);
   width: 100%;
   height: 100%;
@@ -664,7 +664,11 @@ html[dir="ltr"] .open_menu {
 }
 
 .open_popup {
-  top: 50% !important;
+  right: 0;
+}
+
+.close_popup {
+  left: -100% !important;
 }
 
 .clsoe_popup {
@@ -682,6 +686,56 @@ html[dir="ltr"] .open_menu {
 
 .clsoe_popup:hover {
   color: #ffc700;
+}
+
+@-webkit-keyframes inscreen {
+  0% {
+    right: -100%;
+  }
+  100% {
+    right: 0;
+  }
+}
+
+@keyframes inscreen {
+  0% {
+    right: -100%;
+  }
+  100% {
+    right: 0;
+  }
+}
+
+.inscreen {
+  -webkit-animation: inscreen 0.4s ease forwards;
+          animation: inscreen 0.4s ease forwards;
+}
+
+@-webkit-keyframes outscreen {
+  0% {
+    right: auto;
+    left: 0;
+  }
+  100% {
+    right: auto;
+    left: -100%;
+  }
+}
+
+@keyframes outscreen {
+  0% {
+    right: auto;
+    left: 0;
+  }
+  100% {
+    right: auto;
+    left: -100%;
+  }
+}
+
+.outscreen {
+  -webkit-animation: outscreen 0.5s ease forwards;
+          animation: outscreen 0.5s ease forwards;
 }
 
 @media only screen and (max-width: 767px) {
@@ -735,12 +789,12 @@ main {
   -webkit-transition: .5s;
   transition: .5s;
   color: #253138;
-  border: 1px solid transparent;
+  border: 2px solid transparent;
   font-weight: 700;
   min-width: 180px;
   text-transform: capitalize;
   height: 50px;
-  padding: 0 40px;
+  padding: 0 20px;
   border-radius: 25px;
   color: #253138;
 }
@@ -1179,8 +1233,8 @@ html[dir="ltr"] .services .out_container {
 .block1, .block2, .block3 {
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
-  -webkit-animation-duration: 15s;
-          animation-duration: 15s;
+  -webkit-animation-duration: 50s;
+          animation-duration: 50s;
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
   -webkit-animation-fill-mode: forwards;
@@ -2120,6 +2174,7 @@ footer p {
   color: #b3acac;
   font-size: 14px;
   font-weight: 400;
+  text-align: start;
 }
 
 .select2-container--default .select2-results__option--selected {
@@ -2215,7 +2270,7 @@ footer p {
   -webkit-transition: .5s;
   transition: .5s;
   color: #253138;
-  border: 1px solid transparent;
+  border: 2px solid transparent;
   font-weight: 700;
   min-width: 180px;
   text-transform: capitalize;
@@ -2579,10 +2634,6 @@ footer p {
 .cta_section {
   background-image: url("../images/cta.png");
   background-color: #253138;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
   padding: 100px 0;
   margin-bottom: 120px;
 }
@@ -2617,10 +2668,23 @@ footer p {
   border-color: #ffc700;
 }
 
+.cta .btn_group button button.click_popup:hover {
+  background-color: #ffdb5b;
+  border-color: #ffdb5b;
+}
+
 .cta .btn_group button.b_white {
   background-color: #ffc700;
   color: #253138;
   border-color: transparent;
+}
+
+.cta .btn_group button.b_white:hover {
+  background-color: #ffdb5b;
+}
+
+.click_popup:hover {
+  background-color: #ffdb5b !important;
 }
 
 @media only screen and (max-width: 767px) {

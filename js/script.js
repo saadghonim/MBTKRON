@@ -72,14 +72,21 @@ $(".hover_menu").click(function(){
 })
 // popUp
 $(".click_popup").click(function(){
-  $(".fixed_form").addClass("open_popup")
+  $(".fixed_form").addClass("inscreen")
   $(".moboverlay").fadeIn("500");
   $("body").addClass("over_");
+  $(".fixed_form").removeClass("outscreen")
+
+
 });
 $(".moboverlay, .clsoe_popup").click(function(){
-  $(".fixed_form").removeClass("open_popup")
+  // $(".fixed_form").removeClass("open_popup")
   $(".moboverlay").fadeOut("500");
   $("body").removeClass("over_");
+  $(".fixed_form").removeClass("inscreen")
+  $(".fixed_form").addClass("outscreen")
+
+
 });
 // ~~~~~~~~~~~~~~~
 
