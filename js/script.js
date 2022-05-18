@@ -99,13 +99,10 @@ $('.clients .owl-carousel').owlCarousel({
   rtl: $("html").attr("dir") == "rtl" ? true : false,
   responsive:{
       0:{
-          items:2
+          items:3
       },
       600:{
-          items:2
-      },
-      1000:{
-          items:5
+          items:4
       }
   }
 })
@@ -183,5 +180,24 @@ function set_ele(set_element)
   check_element(set_element);
 }
 // ~~~~~~~~~~~~~~~~~~~~~
+
+// ~~~~~~~~~~wow.js
+new WOW().init();
+document.documentElement.style.setProperty('--animate-duration', '.8s');
+
+// ~~~~~~~~~~~~back_top
+var btn = $('.back_top');
+
+$(window).scroll(function() {
+  if ($(window).scrollTop() > 100) {
+    btn.addClass('show');
+  } else {
+    btn.removeClass('show');
+  }
+});
+btn.on('click', function(e) {
+  e.preventDefault();
+  $('html, body').animate({scrollTop:0}, '500');
+});
 
 

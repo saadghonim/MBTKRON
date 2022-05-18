@@ -20,6 +20,7 @@
   color: #808080;
   font-weight: 400;
   margin-bottom: 100px;
+  text-transform: capitalize;
   a{
     margin-inline-end: 10px;
     font-size: 15px;
@@ -143,6 +144,7 @@
         font-size: 22px;
         color: $main_color;
         font-weight: 400;
+        text-transform: capitalize;
       }
       &:nth-child(4) {
         margin: 0 15px;

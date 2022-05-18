@@ -11,8 +11,10 @@
     .owl-item{
       img{
       max-width: 100%;
-      width: auto;
+      width: 114px;
+      height: 114px;
       margin: auto;
+      border-radius: 50%;
       }
     }
   }
@@ -22,6 +24,7 @@
     display: block;
     margin-bottom: 40px;
     color: $main_color;
+    text-transform: capitalize;
   }
 
 }

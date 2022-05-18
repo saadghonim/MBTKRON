@@ -212,11 +212,16 @@
   color: $main_color;
   border: 1px solid transparent;
   font-weight: 700;
+  min-width: 180px;
+  text-transform: capitalize;
+  @include xs{
+    min-width: 160px;
+  }
   &:hover{
     border-color: $color_4;
-    background-color: $color_1;
+    background-color: $color_2;
+    border-color: $color_2;
   }
   
 }
-
 

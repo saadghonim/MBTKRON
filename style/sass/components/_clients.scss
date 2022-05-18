@@ -26,6 +26,7 @@
 		line-height: 1.667;
 		margin-bottom: 20px;
 		display: block;
+    text-transform: capitalize;
 	}
 	p{
 		font-size: 22px;
@@ -110,11 +111,14 @@
     margin-bottom: 50px;
   }
   .clients_content {
+    text-align: center;
     width: 100%;
     padding-top: 60px;
+    h2{
+      text-align: center;
+    }
       strong {
         font-size: 18px;
-
     }
     p{
       font-size: 14px;

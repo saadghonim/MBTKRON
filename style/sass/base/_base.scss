@@ -82,3 +82,47 @@ figure{margin: 0;}
     left:48%; 
   }
   
+
+  // back-up
+  .back_top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    transition: background-color .3s, opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.20);
+    z-index: 1000;
+    background-color: $color_1!important;
+  
+    &:hover {
+      cursor: pointer;
+      background-color: $color_2!important;
+      color: $color_2;
+      &::after{
+        color: $main_color ;
+      }
+    }
+    color: rgb(255, 200, 0);
+    &::after{
+      content: "";
+      font-family: "line Awesome Free";
+      font-weight: 900;
+      font-size: 18px;
+      color: $main_color;
+  
+    }
+  }
+  
+  .back_top.show {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  

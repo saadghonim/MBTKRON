@@ -35,11 +35,6 @@
       background-color: $color_2;
       color: $main_color;
       border-color: transparent;
-      &:hover{
-        background-color: transparent;
-        color: $color_1;
-        border-color: #676f74;
-      }
     }
   }
 }
