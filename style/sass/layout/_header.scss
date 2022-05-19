@@ -1,6 +1,4 @@
-*{
-  // transition: 7s !important;
-}
+
 header{
   padding-top: 10px;
   z-index: 90;
@@ -15,6 +13,7 @@ header{
   justify-content: space-between;
   img{
     transition: .5s;
+    margin-bottom: 4px;
   }
 }
 div.btn_{
@@ -111,6 +110,9 @@ nav{
     opacity: 0;
     z-index: 0;
     transition: .5s;
+    @include en{
+      min-width: 215px;
+    }
     &::after {
       content: '';
       display: block;
@@ -145,6 +147,7 @@ nav{
         font-weight: 400;
         transition: .5s;
         font-size: 15px;
+        text-transform: capitalize;
         &:hover{
           color: $color_2;
           text-decoration: none;
@@ -234,6 +237,12 @@ nav{
       display: flex;
       align-items: center;
       justify-content: center;
+      &:hover{
+        &::after{
+          color: $color_2;
+
+        }
+      }
       &::after{
         content:"" ;
         font-family: "line Awesome Free";
@@ -241,6 +250,8 @@ nav{
         font-size: 8px;
         color: $main_color;
         margin-inline-start: 2px;
+        transition: .5s;
+
       }
     }
     .ul_menu{

@@ -294,6 +294,7 @@ header {
 .header img {
   -webkit-transition: .5s;
   transition: .5s;
+  margin-bottom: 4px;
 }
 
 div.btn_ {
@@ -439,6 +440,10 @@ nav .ul_menu {
   transition: .5s;
 }
 
+html[dir="ltr"] nav .ul_menu {
+  min-width: 215px;
+}
+
 nav .ul_menu::after {
   content: '';
   display: block;
@@ -480,6 +485,7 @@ nav .ul_menu li a {
   -webkit-transition: .5s;
   transition: .5s;
   font-size: 15px;
+  text-transform: capitalize;
 }
 
 nav .ul_menu li a:hover {
@@ -587,6 +593,9 @@ nav .ul_menu li a:hover {
         -ms-flex-pack: center;
             justify-content: center;
   }
+  .hover_menu > a:hover::after {
+    color: #ffc700;
+  }
   .hover_menu > a::after {
     content: "";
     font-family: "line Awesome Free";
@@ -595,6 +604,8 @@ nav .ul_menu li a:hover {
     color: #253138;
     -webkit-margin-start: 2px;
             margin-inline-start: 2px;
+    -webkit-transition: .5s;
+    transition: .5s;
   }
   .hover_menu .ul_menu {
     -webkit-transition: inherit;
@@ -793,10 +804,6 @@ main {
   color: #253138;
   line-height: 1.2;
   margin-bottom: 40px;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
 }
 
 .btn_group {
@@ -926,9 +933,13 @@ main {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   .btn_section {
     text-align: center;
+    margin-bottom: 30ppx;
   }
   .btn_section h3 {
     font-size: 22px;
@@ -940,7 +951,6 @@ main {
   }
   .main_intro img {
     max-width: 100%;
-    margin-bottom: 30px;
   }
   .drag_down_parant {
     bottom: 15px;
@@ -1549,7 +1559,7 @@ html[dir="ltr"] .reviews .owl-nav button.owl-next {
     outline: 0;
   }
   .reviews .owl-dots {
-    bottom: -29px;
+    bottom: -27px;
   }
   .reviews strong {
     font-size: 22px;
@@ -1796,7 +1806,7 @@ html[dir="ltr"] .collapse_parant .number_c {
   border-radius: 15px;
 }
 
-.contact_right .anc_address, .contact_right h3 {
+.contact_right h3 {
   font-size: 16px;
   font-weight: 700;
   color: #ffffff;
@@ -1813,7 +1823,7 @@ html[dir="ltr"] .collapse_parant .number_c {
           justify-content: start;
 }
 
-.contact_right .anc_address i, .contact_right h3 i {
+.contact_right h3 i {
   -webkit-margin-end: 5px;
           margin-inline-end: 5px;
   font-size: 24px;
@@ -1823,7 +1833,7 @@ html[dir="ltr"] .collapse_parant .number_c {
   color: #ffc700;
 }
 
-.contact_right p {
+.contact_right .anc_address {
   font-size: 16px;
   color: #b3b3b3;
   font-weight: 400;
@@ -1831,6 +1841,10 @@ html[dir="ltr"] .collapse_parant .number_c {
   width: 90%;
   margin-bottom: 30px;
   text-transform: capitalize;
+}
+
+.contact_right .anc_address:hover {
+  color: #ffc700;
 }
 
 .contact_faq {
@@ -2224,7 +2238,7 @@ footer p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-size: 15px;
+  font-size: 16px;
   color: #808080;
   font-weight: 400;
   margin-bottom: 100px;
@@ -2727,6 +2741,14 @@ footer p {
     background-attachment: inherit;
     padding: 60px 0;
     margin-bottom: 80px;
+  }
+  .ctaback {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: inherit;
+    height: 100%;
+    z-index: -1;
   }
   .cta {
     text-align: center;

@@ -26,10 +26,7 @@ main{
     color: $main_color;
     line-height: 1.2;
     margin-bottom: 40px;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
+
   }
 }
 
@@ -114,10 +111,12 @@ main{
   }
   .main_intro{
     flex-direction: column;
+    display: flex;
     
   }
   .btn_section{
     text-align: center;
+    margin-bottom: 30ppx;
     h3{
       font-size: 22px;
       margin-bottom: 30px;
@@ -131,7 +130,7 @@ main{
   .main_intro{
     img{
       max-width: 100%;
-      margin-bottom: 30px;
+      // margin-bottom: 30px;
     }
   }
   .drag_down_parant{

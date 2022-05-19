@@ -22,7 +22,7 @@
   padding: 40px 20px ;
   text-align: start;
   border-radius: 15px;
-  .anc_address,h3 {
+  h3 {
     font-size: 16px;
     font-weight: 700;
     color: $color_1;
@@ -41,7 +41,7 @@
       color: $color_2;
     }
   }
-  p{
+  .anc_address{
     font-size: 16px;
     color: $color_5;
     font-weight: 400;
@@ -49,12 +49,16 @@
     width: 90%;
     margin-bottom: 30px;
     text-transform: capitalize;
+    &:hover{
+      color: $color_2;
+    }
   }
 }
 .contact_faq{
   display: flex;
   flex-direction: column;
 }
+
 .group_contact{
   margin-bottom: 40px;
   a{
