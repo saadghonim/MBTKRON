@@ -22,7 +22,7 @@
   padding: 40px 20px ;
   text-align: start;
   border-radius: 15px;
-  h3{
+  .anc_address,h3 {
     font-size: 16px;
     font-weight: 700;
     color: $color_1;
@@ -36,7 +36,11 @@
       font-size: 24px;
     }
   }
-
+  .anc_address, .anc_contact{
+    &:hover{
+      color: $color_2;
+    }
+  }
   p{
     font-size: 16px;
     color: $color_5;
@@ -99,15 +103,6 @@
 }
 form{
   text-align: start;
-  .Rectangle_1 {
-    background-color: #ffc700;
-    position: absolute;
-    left: 161px;
-    top: 6969px;
-    width: 180px;
-    height: 50px;
-    z-index: 59;
-  }
   .btn_send{
     min-width: 180px;
     height: 50px;
@@ -119,8 +114,8 @@ form{
     background-color: $color_2;
     border: 2px solid transparent;
     &:hover{
-      border-color: $color_2;
-      background-color: $color_2;
+      border-color: transparent;
+      background-color: #ffdb5b ;
     }
   }
   .btn_div{

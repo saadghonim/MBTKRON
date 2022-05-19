@@ -5,11 +5,15 @@ main{
   margin-bottom: 110px;
 }
 .main_intro{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(2 , 45% 55%);
 }
+.intro_img{
+  img{
+    max-width: 100%;
 
+  }
+}
 // btn group
 .btn_section{
   text-align: start;
@@ -18,8 +22,13 @@ main{
     color: $main_color;
     line-height: 1.2;
     margin-bottom: 40px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 }
+
 .btn_group{
   display: flex;
   button{

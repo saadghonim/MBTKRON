@@ -1,21 +1,21 @@
 .cta_section{
-  // background-image: url("../images/cta.png");
   background-color: $main_color;
-  // background-position: center;
-  // background-repeat: no-repeat;
   padding: 100px 0;
   margin-bottom: 120px;
   position: relative;
+  z-index: 10;
 }
 .ctaback{
   position: absolute;
   top: 0;
   left: 0;
-  bottom: 0;
   max-width: 100%;
+  z-index: -1;
+
 }
 .cta{
   text-align: center;
+  z-index: 50;
   h2{
     font-size: 40px;
     font-weight: 700;
@@ -33,16 +33,10 @@
       &:hover{
       background-color: $color_2;
       color: $main_color;
-      border-color: $color_2;
+      border-color: transparent;
       }
-      button.click_popup{
-        &:hover{
-          background-color: #ffdb5b;
-          border-color: #ffdb5b;
+      }
 
-        }
-      }
-    }
     button.b_white{
       background-color: $color_2;
       color: $main_color;
@@ -56,7 +50,18 @@
 }
 .click_popup{
   &:hover{
-    background-color: #ffdb5b!important
+    background-color: #ffdb5b!important;
+    border-color: #ffdb5b;
+
+  }
+}
+.btn_group{
+  .click_popup{
+    &:hover{
+      background-color: #ffdb5b!important;
+      border-color: #ffdb5b;
+  
+    }
   }
 }
 

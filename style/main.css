@@ -41,7 +41,7 @@ figure {
 }
 
 img {
-  image-rendering: -webkit-optimize-contrast;
+  image-rendering: -webkit-optimize-contrast !important;
 }
 
 .m_P_gh {
@@ -350,6 +350,10 @@ div.btn_ .btn_appointment:hover {
   border-color: #cccccc;
   background-color: #ffc700;
   border-color: #ffc700;
+}
+
+div.btn_ .btn_appointment:hover {
+  border-color: transparent;
 }
 
 div.btn_ .btn_appointment::before {
@@ -757,15 +761,14 @@ main {
 }
 
 .main_intro {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (45% 55%)[2];
+      grid-template-columns: repeat(2, 45% 55%);
+}
+
+.intro_img img {
+  max-width: 100%;
 }
 
 .btn_section {
@@ -777,6 +780,10 @@ main {
   color: #253138;
   line-height: 1.2;
   margin-bottom: 40px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .btn_group {
@@ -1776,7 +1783,7 @@ html[dir="ltr"] .collapse_parant .number_c {
   border-radius: 15px;
 }
 
-.contact_right h3 {
+.contact_right .anc_address, .contact_right h3 {
   font-size: 16px;
   font-weight: 700;
   color: #ffffff;
@@ -1793,10 +1800,14 @@ html[dir="ltr"] .collapse_parant .number_c {
           justify-content: start;
 }
 
-.contact_right h3 i {
+.contact_right .anc_address i, .contact_right h3 i {
   -webkit-margin-end: 5px;
           margin-inline-end: 5px;
   font-size: 24px;
+}
+
+.contact_right .anc_address:hover, .contact_right .anc_contact:hover {
+  color: #ffc700;
 }
 
 .contact_right p {
@@ -1885,16 +1896,6 @@ form {
   text-align: start;
 }
 
-form .Rectangle_1 {
-  background-color: #ffc700;
-  position: absolute;
-  left: 161px;
-  top: 6969px;
-  width: 180px;
-  height: 50px;
-  z-index: 59;
-}
-
 form .btn_send {
   min-width: 180px;
   height: 50px;
@@ -1908,8 +1909,8 @@ form .btn_send {
 }
 
 form .btn_send:hover {
-  border-color: #ffc700;
-  background-color: #ffc700;
+  border-color: transparent;
+  background-color: #ffdb5b;
 }
 
 form .btn_div {
@@ -2378,7 +2379,7 @@ footer p {
 
 .services_section_ser .services_ser .size_img {
   height: 150px;
-  width: 100%;
+  width: 90%;
   margin-bottom: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2644,18 +2645,20 @@ footer p {
   padding: 100px 0;
   margin-bottom: 120px;
   position: relative;
+  z-index: 10;
 }
 
 .ctaback {
   position: absolute;
   top: 0;
   left: 0;
-  bottom: 0;
   max-width: 100%;
+  z-index: -1;
 }
 
 .cta {
   text-align: center;
+  z-index: 50;
 }
 
 .cta h2 {
@@ -2681,12 +2684,7 @@ footer p {
 .cta .btn_group button:hover {
   background-color: #ffc700;
   color: #253138;
-  border-color: #ffc700;
-}
-
-.cta .btn_group button button.click_popup:hover {
-  background-color: #ffdb5b;
-  border-color: #ffdb5b;
+  border-color: transparent;
 }
 
 .cta .btn_group button.b_white {
@@ -2701,6 +2699,12 @@ footer p {
 
 .click_popup:hover {
   background-color: #ffdb5b !important;
+  border-color: #ffdb5b;
+}
+
+.btn_group .click_popup:hover {
+  background-color: #ffdb5b !important;
+  border-color: #ffdb5b;
 }
 
 @media only screen and (max-width: 767px) {

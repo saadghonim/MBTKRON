@@ -40,6 +40,9 @@ div.btn_{
     align-items: center;
     line-height: 1.6;
     justify-content: center;
+    &:hover{
+      border-color: transparent;
+    }
     &::before{
       content: "";
       font-family: "line awesome free";
