@@ -522,6 +522,7 @@ nav .ul_menu li a:hover {
     border-radius: 17.5px;
     min-width: 130pxhlhl;
     height: 35px;
+    min-width: 130px;
   }
   div.btn_ .btn_appointment::before {
     font-size: 20px;
@@ -1818,7 +1819,7 @@ html[dir="ltr"] .collapse_parant .number_c {
     padding: 20px 40px 20px 20px;
   }
   .collapse_parant .toggle_collapse {
-    padding: 0px 20px 20px;
+    padding: 0px 20px 20px 40px;
     font-size: 14px;
   }
   .collapse_parant .number_c {
