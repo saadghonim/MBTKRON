@@ -176,7 +176,7 @@ form{
     }
   }
   textarea.form-control{
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     width: 100%;
     border: 2px solid #ebebeb;
     padding: 0 25px;
@@ -226,7 +226,7 @@ form{
     }
   }
   .contact_section{
-    margin-bottom: 60px;
+    margin-bottom: 40px;
     .strong-title{
       font-size: 22px;
     }
@@ -241,7 +241,7 @@ form{
 }
 
 footer{
-  margin-bottom: 80px;
+  margin-bottom: 50px;
   p{
     font-size: 14px;
     color: #808080;
@@ -266,7 +266,11 @@ footer{
     flex-direction: column;
   }
   .form_section {
-    padding:40px 20px
+    padding:40px 20px;
+    >p{
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
   }
   footer{
     margin-bottom: 30px;

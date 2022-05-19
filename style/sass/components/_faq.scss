@@ -120,17 +120,22 @@
     }
     .faq{
       width: 100%;
+      >h2{
+        margin-bottom: 20px;
+      }
     }
     .collapse_parant{
       .btn_collapse_{
-        padding: 20px 20px 20px 30px;
+        padding: 20px 20px 20px 40px;
+        font-size: 14px;
         @include en{
-        padding: 20px 30px 20px 20px;
+        padding: 20px 40px 20px 20px;
 
         }
       }
       .toggle_collapse {
         padding: 0px 20px 20px ;
+        font-size: 14px;
       }
       .number_c {
         padding: 0;
@@ -153,5 +158,8 @@
       .btn_collapse_{
         font-size: 16px;
       }
+    }
+    .title_main{
+      font-size: 18px;
     }
   }

@@ -182,6 +182,7 @@ nav{
       padding: 0 15px;
       font-size: 12px;
       border-radius: 17.5px;
+      min-width: 130pxhlhl;
       height: 35px;
       &::before{
         font-size: 20px;
@@ -376,5 +377,11 @@ right: 0
   .clsoe_popup{
     top: 50px;
   
+  }
+  .fixed_{
+    z-index: 50;
+    transition: .5s;
+    padding: 5px 0;
+
   }
 }

@@ -110,6 +110,9 @@
     color: #808080;
     text-align: center;
     text-transform: capitalize;
+    @include xs{
+      font-size: 18px;
+    }
   }
   @mixin angle_ {
     &::after{
@@ -194,10 +197,10 @@
       text-align: center;
       .owl-dot{
         border-radius: 50%;
-        width: 8px;
-        height: 8px;
-        background-color: #cccccc;
-        opacity: 0.5;
+        width: 6px;
+        height: 6px;
+        background-color: #ffffff;
+        opacity: 0.2;
         margin-inline-end: 5px;
     }
     .active{
