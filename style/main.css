@@ -2378,9 +2378,9 @@ footer p {
 }
 
 .services_section_ser .services_ser .size_img {
-  height: 150px;
-  width: 90%;
-  margin-bottom: 10px;
+  height: 100px;
+  width: 100%;
+  margin-bottom: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2599,6 +2599,9 @@ footer p {
     width: 50%;
     margin-bottom: 0;
   }
+  .services_section_ser .services_ser .item_services > h3 {
+    font-size: 20px;
+  }
   .services_section_ser .services_ser .item_services:nth-child(4) {
     margin: 0px;
   }
@@ -2634,9 +2637,6 @@ footer p {
     padding: 60px 0 50px;
     -webkit-clip-path: ellipse(140% 50% at 50% 50%);
             clip-path: ellipse(140% 50% at 50% 50%);
-  }
-  .services_section_ser .services_ser .size_img {
-    width: 60%;
   }
 }
 

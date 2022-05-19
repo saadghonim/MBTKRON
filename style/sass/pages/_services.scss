@@ -127,9 +127,9 @@
     flex-wrap: wrap;
     justify-content: center;
     .size_img{
-      height: 150px;
-      width: 90%;
-      margin-bottom: 10px;
+      height: 100px;
+      width: 100%;
+      margin-bottom: 30px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -306,6 +306,9 @@
       .item_services{
         width: 50%;
         margin-bottom: 0;
+      >h3{
+        font-size: 20px;
+      }
           &:nth-child(4) {
             margin: 0px;
           }
@@ -342,12 +345,6 @@
     padding: 60px 0 50px;
     clip-path: ellipse(140% 50% at 50% 50%);
   }
-  .services_section_ser {
-    .services_ser{
-      .size_img{
-        width: 60%;
-      }
-    } 
-  }
+
 
 }
