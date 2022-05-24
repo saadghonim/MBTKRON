@@ -173,6 +173,8 @@ function check_element(ele)
       if(document.getElementById("bar1").style.width=="100%")
       {
         $(".progress").fadeOut("slow");
+        $(".progress_preload").hide("slow");
+
       }			
     });
   }
