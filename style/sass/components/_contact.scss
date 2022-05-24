@@ -321,6 +321,11 @@ footer{
 .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable{
   background-color: $color_2!important;
   color: #808080;
+  &:last-child{
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+  }
 }
 .select2-search--dropdown{
   display: none;
@@ -349,7 +354,7 @@ footer{
   }
 }
 .select2-container--open.select2-container--default .select2-selection--single{
-
+  overflow: hidden;
   border-bottom: transparent;
 }
 .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable{
