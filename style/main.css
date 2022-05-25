@@ -2209,10 +2209,6 @@ footer p {
   color: #808080;
 }
 
-.select2-search--dropdown {
-  display: none !important;
-}
-
 .select2-container {
   padding: 0;
 }
@@ -2240,12 +2236,29 @@ footer p {
   border-bottom-right-radius: 20px;
 }
 
+.select2-container--default .select2-search--dropdown .select2-search__field {
+  border-radius: 19.5px;
+  border: 1px solid #ebebeb;
+  padding: 8px 20px;
+  caret-color: #ffc700;
+  color: #b3acac;
+  font-size: 14px;
+  font-weight: 400;
+}
+
 .select2-search--dropdown {
-  display: none;
+  border: none;
+  margin: 0 10px;
+}
+
+[type=search] {
+  outline: 0;
 }
 
 .select2-results__option {
   padding: 10px 20px;
+  color: #b3acac;
+  text-align: center;
 }
 
 .select2-dropdown {
